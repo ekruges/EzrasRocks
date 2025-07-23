@@ -21,4 +21,5 @@ This project uses an AI-powered image recognition system trained with the Jetson
 9. After finished, the image should both display and be accompanied by a confidence score and the class the model thinks it is.
 10. The classification should also be logged below the image in the Classification Log.
 
-[View a video explanation here](showcase.mkv)
+[View a video explanation here](https://www.mediafire.com/file/a63kslbyexsixvs/showcase.mkv/file)
+or in the attatched files
