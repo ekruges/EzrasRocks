@@ -1,0 +1,9 @@
+Basalt
+chert
+Clay
+Conglomerate
+Diatomite
+gypsum
+olivine-basalt
+Shale-(Mudstone)
+Siliceous-sinter

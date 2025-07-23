@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['drug-name']
+
+roboflow:
+  workspace: kabul-university-evptq
+  project: drug-name-detection
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kabul-university-evptq/drug-name-detection/dataset/2
