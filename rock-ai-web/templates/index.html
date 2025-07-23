@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Classifier</title>
+</head>
+<body>
+  <h1>EzrasRocks: Rock Classifier</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Classify Image</button>
+  </form>
+
+  {% if result %}
+    <h3>🔎 Result:</h3>
+    <p>{{ result }}</p>
+    {% if filename %}
+      <img src="{{ url_for('static', filename='uploads/' ~ filename) }}" style="max-width:400px;">
+    {% endif %}
+  {% endif %}
+{% if log_entries %}
+<hr>
+  <h3 class="mt-5">📄 Classification Log</h3>
+  <hr>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Filename</th>
+        <th>Prediction</th>
+        <th>Confidence (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in log_entries %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+</body>
+</html>
